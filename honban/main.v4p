@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
    <PATCH nodename="D:\vvvv32\vvvv_45beta34.2_x86\works\hikari\honban\main.v4p" systemname="hikari_tree" filename="D:\vvvv32\vvvv_45beta34.2_x86\works\hikari_tree.v4p" scrollx="15" scrolly="-360">
-   <BOUNDS type="Window" left="990" top="690" width="20010" height="13995">
+   <BOUNDS type="Window" left="1740" top="750" width="20010" height="13995">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -133,9 +133,9 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1830" top="2250" width="17340" height="12460">
    </BOUNDS>
-   <BOUNDS type="Window" left="990" top="690" width="20010" height="13995">
+   <BOUNDS type="Window" left="1740" top="750" width="20010" height="13995">
    </BOUNDS>
-   <PIN pinname="Start" visible="1" slicecount="1" values="1">
+   <PIN pinname="Start" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Reset" visible="1" slicecount="1" values="0">
    </PIN>
@@ -155,7 +155,7 @@
    </BOUNDS>
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
-   <BOUNDS type="Window" left="990" top="690" width="20010" height="13995">
+   <BOUNDS type="Window" left="1740" top="750" width="20010" height="13995">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -357,5 +357,23 @@
    <LINK srcnodeid="327" srcpinname="Texture" dstnodeid="236" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="281" srcpinname="Rear Screen" dstnodeid="305" dstpinname="Texture">
+   </LINK>
+   <NODE systemname="PerfMeter (Debug)" filename="%VVVV%\lib\nodes\modules\Debug\PerfMeter (Debug).v4p" nodename="PerfMeter (Debug)" componentmode="Hidden" id="329">
+   <BOUNDS type="Node" left="10410" top="1050" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="fps" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="330" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="11490" top="1680" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11490" top="1680" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="329" srcpinname="fps" dstnodeid="330" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
