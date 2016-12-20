@@ -73,7 +73,7 @@
    </PIN>
    </NODE>
    <NODE id="7" systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden">
-   <BOUNDS type="Node" left="7665" top="5880" width="100" height="100">
+   <BOUNDS type="Node" left="6780" top="5220" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Filename" visible="1" slicecount="1" values="||">
    </PIN>
@@ -81,9 +81,9 @@
    </PIN>
    </NODE>
    <NODE id="8" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="7680" top="5460" width="795" height="240">
+   <BOUNDS type="Box" left="6795" top="4800" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="7680" top="5460" width="0" height="0">
+   <BOUNDS type="Node" left="6795" top="4800" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="..\..\..\..\assets\images\damsk.jpg">
    </PIN>
@@ -97,7 +97,7 @@
    </PIN>
    </NODE>
    <NODE id="9" systemname="Blend (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Mixer\Blend.tfx" nodename="Blend (DX11.TextureFX)" componentmode="Hidden">
-   <BOUNDS type="Node" left="7455" top="7350" width="100" height="100">
+   <BOUNDS type="Node" left="6570" top="6690" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
@@ -121,9 +121,9 @@
    <NODE id="12" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
    <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
-   <BOUNDS type="Box" left="6420" top="6915" width="870" height="330">
+   <BOUNDS type="Box" left="5535" top="6255" width="870" height="330">
    </BOUNDS>
-   <BOUNDS type="Node" left="6420" top="6915" width="0" height="0">
+   <BOUNDS type="Node" left="5535" top="6255" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -133,7 +133,7 @@
    <NODE id="13" systemname="Blend (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Mixer\Blend.tfx" nodename="Blend (DX11.TextureFX)" componentmode="Hidden">
    <PIN pinname="Opacity" visible="1" slicecount="1" values="0.5">
    </PIN>
-   <BOUNDS type="Node" left="8700" top="8175" width="100" height="100">
+   <BOUNDS type="Node" left="7815" top="7515" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
@@ -153,9 +153,9 @@
    </PIN>
    </NODE>
    <NODE id="24" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="10590" top="6015" width="795" height="240">
+   <BOUNDS type="Box" left="9705" top="5355" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="10590" top="6015" width="0" height="0">
+   <BOUNDS type="Node" left="9705" top="5355" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="..\..\..\..\assets\images\black.png">
    </PIN>
@@ -169,7 +169,7 @@
    </PIN>
    </NODE>
    <NODE id="25" systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden">
-   <BOUNDS type="Node" left="10605" top="6480" width="100" height="100">
+   <BOUNDS type="Node" left="9720" top="5820" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Filename" visible="1" slicecount="1" values="||">
    </PIN>
@@ -187,7 +187,7 @@
    </PIN>
    </NODE>
    <NODE id="35" systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden">
-   <BOUNDS type="Node" left="9075" top="6180" width="100" height="100">
+   <BOUNDS type="Node" left="8190" top="5520" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
@@ -201,9 +201,9 @@
    </PIN>
    </NODE>
    <NODE id="36" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="9120" top="6720" width="795" height="240">
+   <BOUNDS type="Box" left="8235" top="6060" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="9120" top="6720" width="0" height="0">
+   <BOUNDS type="Node" left="8235" top="6060" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -231,7 +231,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="14715" top="690" width="4800" height="3435">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|M2 --- ダマスクの影 ---&cr;&lf;0:00 影のみ&cr;&lf;1:30 白い影へ(20s)&cr;&lf;2:01 ダマスク柄(30s)&cr;&lf;2:45 ゆっくり引いていく, 木が模様になる(30s)&cr;&lf;3:15 ゆっくり影が出てくる(15s)&cr;&lf;3:30 ゆっくりズーム（3人ほどうつる, 30s）&cr;&lf;     途中で5s程止める(踊りに合わせる)&cr;&lf;4:00 ゆっくりズーム(30s)&cr;&lf;5:50 重なるときに影がとダマスクが消える&cr;&lf;        手動でスタート(Timelinerを開いて調整)|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|M1 --- Opening ---&cr;&lf;0:00 背景黒&cr;&lf;&cr;&lf;&cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -281,9 +281,9 @@
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="37" srcpinname="Texture Out" dstnodeid="9" dstpinname="Texture In">
-   <LINKPOINT x="3660" y="6470">
+   <LINKPOINT x="3365" y="6250">
    </LINKPOINT>
-   <LINKPOINT x="4485" y="7255">
+   <LINKPOINT x="3895" y="6815">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="9" dstpinname="Opacity">
@@ -307,7 +307,7 @@
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="44">
-   <BOUNDS type="Node" left="6345" top="6435" width="100" height="100">
+   <BOUNDS type="Node" left="5460" top="5775" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
@@ -319,9 +319,9 @@
    <LINK srcnodeid="44" srcpinname="Output" dstnodeid="12" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="45" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="6675" top="6105" width="795" height="240">
+   <BOUNDS type="Box" left="5790" top="5445" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="6675" top="6105" width="0" height="0">
+   <BOUNDS type="Node" left="5790" top="5445" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.7">
    </PIN>

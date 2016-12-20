@@ -7,7 +7,7 @@
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
-   <PIN pinname="Width" slicecount="1" values="0.4">
+   <PIN pinname="Width" slicecount="1" values="0.4" visible="1">
    </PIN>
    <PIN pinname="Technique" slicecount="1" values="TwoPass">
    </PIN>
@@ -231,13 +231,13 @@
    </PIN>
    </NODE>
    <NODE id="21" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="9315" top="1830" width="975" height="915">
+   <BOUNDS type="Box" left="8385" top="615" width="975" height="915">
    </BOUNDS>
-   <BOUNDS type="Node" left="9315" top="1830" width="0" height="0">
+   <BOUNDS type="Node" left="8385" top="615" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Start">
    </PIN>
@@ -251,9 +251,9 @@
    </PIN>
    </NODE>
    <NODE id="22" systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox">
-   <BOUNDS type="Node" left="6510" top="1875" width="100" height="100">
+   <BOUNDS type="Node" left="5580" top="660" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="6510" top="1875" width="2235" height="915">
+   <BOUNDS type="Box" left="5580" top="660" width="2235" height="915">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="||">
    </PIN>
@@ -265,9 +265,9 @@
    </PIN>
    </NODE>
    <NODE id="23" systemname="secondsToStringTime" filename="%VVVV%\works\hikari\honban\secondsToStringTime.v4p" nodename="%VVVV%\works\hikari\honban\secondsToStringTime.v4p" componentmode="Hidden">
-   <BOUNDS type="Node" left="6510" top="1500" width="0" height="0">
+   <BOUNDS type="Node" left="5580" top="285" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="6510" top="1500" width="4150" height="5605">
+   <BOUNDS type="Box" left="5580" top="285" width="4150" height="5605">
    </BOUNDS>
    <BOUNDS type="Window" left="16410" top="2370" width="5490" height="6645">
    </BOUNDS>
@@ -303,7 +303,7 @@
    <NODE id="26" systemname="Power (Value)" nodename="Power (Value)" componentmode="Hidden">
    <BOUNDS type="Node" left="14640" top="6615" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -361,7 +361,7 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Input 2" visible="1" slicecount="1" values="1">
    </PIN>
@@ -407,7 +407,7 @@
    <NODE id="35" systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden">
    <BOUNDS type="Node" left="9075" top="6180" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="0.5">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -445,9 +445,9 @@
    </PIN>
    </NODE>
    <NODE id="38" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="10815" top="1785" width="1020" height="990">
+   <BOUNDS type="Box" left="9885" top="570" width="1020" height="990">
    </BOUNDS>
-   <BOUNDS type="Node" left="10815" top="1785" width="0" height="0">
+   <BOUNDS type="Node" left="9885" top="570" width="0" height="0">
    </BOUNDS>
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
@@ -463,13 +463,15 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Bang">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="39" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="13620" top="795" width="795" height="270">
+   <BOUNDS type="Node" left="13815" top="405" width="795" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="13620" top="795" width="4800" height="3435">
+   <BOUNDS type="Box" left="13815" top="405" width="4800" height="3435">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|M2 --- ダマスクの影 ---&cr;&lf;0:00 影のみ&cr;&lf;1:30 白い影へ(20s)&cr;&lf;2:01 ダマスク柄(30s)&cr;&lf;2:45 ゆっくり引いていく, 木が模様になる(30s)&cr;&lf;3:15 ゆっくり影が出てくる(15s)&cr;&lf;3:30 ゆっくりズーム（3人ほどうつる, 30s）&cr;&lf;     途中で5s程止める(踊りに合わせる)&cr;&lf;4:00 ゆっくりズーム(30s)&cr;&lf;5:50 重なるときに影がとダマスクが消える&cr;&lf;        手動でスタート(Timelinerを開いて調整)|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|M2 --- ダマスクの影 ---&cr;&lf;0:00 影のみ&cr;&lf;1:30 白い影へ(20s)&cr;&lf;2:01 ダマスク柄(30s)&cr;&lf;2:45 ゆっくり引いていく, 木が模様になる(30s)&cr;&lf;3:15 ゆっくり影が出てくる(15s)&cr;&lf;3:30 ゆっくりズーム（3人ほどうつる, 30s）&cr;&lf;     途中で5s程止める(踊りに合わせる)&cr;&lf;4:00 ゆっくりズーム(30s)&cr;&lf;5:50 重なるときに影がとダマスクが消える&cr;&lf;        手動でスタート|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -574,14 +576,14 @@
    </LINK>
    <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="26" dstpinname="Input 2">
    </LINK>
-   <BOUNDS type="Window" left="870" top="630" width="21090" height="13995">
+   <BOUNDS type="Window" left="990" top="690" width="20010" height="13995">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="43" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="7065" top="3675" width="795" height="240">
+   <BOUNDS type="Box" left="7110" top="2415" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="7065" top="3675" width="0" height="0">
+   <BOUNDS type="Node" left="7110" top="2415" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -593,7 +595,7 @@
    <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="44">
    <BOUNDS type="Node" left="6345" top="6435" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="0.5">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -616,7 +618,7 @@
    </NODE>
    <LINK srcnodeid="45" srcpinname="Y Output Value" dstnodeid="44" dstpinname="Destination Maximum">
    </LINK>
-   <NODE id="0" componentmode="Hidden" systemname="Timeliner (Animation)" filename="%VVVV%\lib\nodes\plugins\Timeliner.dll" nodename="Timeliner (Animation)">
+   <NODE id="0" componentmode="InAWindow" systemname="Timeliner (Animation)" filename="%VVVV%\lib\nodes\plugins\Timeliner.dll" nodename="Timeliner (Animation)">
    <PIN pinname="white-Time0">
    </PIN>
    <PIN pinname="white-Value0">
@@ -633,13 +635,13 @@
    </PIN>
    <PIN pinname="damask-OutType0">
    </PIN>
-   <PIN pinname="zoom-Time0" slicecount="1" values="0">
+   <PIN pinname="zoom-Time0">
    </PIN>
-   <PIN pinname="zoom-Value0" slicecount="1" values="0">
+   <PIN pinname="zoom-Value0">
    </PIN>
-   <PIN pinname="zoom-InType0" slicecount="1" values="2">
+   <PIN pinname="zoom-InType0">
    </PIN>
-   <PIN pinname="zoom-OutType0" slicecount="1" values="2">
+   <PIN pinname="zoom-OutType0">
    </PIN>
    <PIN pinname="shadow-Time0">
    </PIN>
@@ -651,11 +653,11 @@
    </PIN>
    <PIN pinname="GUI Settings" slicecount="1" values="|&lt;GUI&gt;&lt;TIMEBAR Mode=&quot;Jump&quot; /&gt;&lt;SPLITTER Position=&quot;20&quot; /&gt;&lt;/GUI&gt;|">
    </PIN>
-   <BOUNDS type="Window" left="4785" top="240" width="9240" height="9270">
+   <BOUNDS type="Window" left="14385" top="6060" width="9240" height="9270">
    </BOUNDS>
-   <BOUNDS type="Node" left="9195" top="3570" width="100" height="100">
+   <BOUNDS type="Node" left="9240" top="2310" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="9195" top="3570" width="6000" height="3000">
+   <BOUNDS type="Box" left="9240" top="2310" width="6000" height="3000">
    </BOUNDS>
    <PIN pinname="shadow" visible="1">
    </PIN>
@@ -665,11 +667,11 @@
    </PIN>
    <PIN pinname="white" visible="1">
    </PIN>
-   <PIN pinname="Translate" slicecount="1" values="82.1112">
+   <PIN pinname="Translate" slicecount="1" values="21.0245">
    </PIN>
-   <PIN pinname="Scale" slicecount="1" values="0.3166">
+   <PIN pinname="Scale" slicecount="1" values="1.0464">
    </PIN>
-   <PIN pinname="Pin Settings" slicecount="5" values="|&lt;PIN Name=&quot;Ruler0&quot; Type=&quot;Ruler&quot; SliceCount=&quot;0&quot; Height=&quot;40&quot; Parent=&quot;0&quot; /&gt;|,|&lt;PIN Name=&quot;white&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;104&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;False&quot; InterpolationIn=&quot;Cubic&quot; Minimum=&quot;-1.0000&quot; Maximum=&quot;1.5000&quot; /&gt;|,|&lt;PIN Name=&quot;damask&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;102&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;False&quot; InterpolationIn=&quot;Cubic&quot; Minimum=&quot;-1.0000&quot; Maximum=&quot;1.5000&quot; /&gt;|,|&lt;PIN Name=&quot;zoom&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;103&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;False&quot; InterpolationIn=&quot;Cubic&quot; Minimum=&quot;-1.0000&quot; Maximum=&quot;1.5000&quot; /&gt;|,|&lt;PIN Name=&quot;shadow&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;105&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;False&quot; InterpolationIn=&quot;Cubic&quot; Minimum=&quot;-1.0000&quot; Maximum=&quot;1.5000&quot; /&gt;|">
+   <PIN pinname="Pin Settings" slicecount="5" values="|&lt;PIN Name=&quot;Ruler0&quot; Type=&quot;Ruler&quot; SliceCount=&quot;0&quot; Height=&quot;40&quot; Parent=&quot;0&quot; /&gt;|,|&lt;PIN Name=&quot;white&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;102&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;False&quot; InterpolationIn=&quot;Cubic&quot; Minimum=&quot;-1.0000&quot; Maximum=&quot;1.5000&quot; /&gt;|,|&lt;PIN Name=&quot;damask&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;102&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;False&quot; InterpolationIn=&quot;Cubic&quot; Minimum=&quot;-1.0000&quot; Maximum=&quot;1.5000&quot; /&gt;|,|&lt;PIN Name=&quot;zoom&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;102&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;False&quot; InterpolationIn=&quot;Cubic&quot; Minimum=&quot;-1.0000&quot; Maximum=&quot;1.5000&quot; /&gt;|,|&lt;PIN Name=&quot;shadow&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;102&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;False&quot; InterpolationIn=&quot;Cubic&quot; Minimum=&quot;-1.0000&quot; Maximum=&quot;1.5000&quot; /&gt;|">
    </PIN>
    <PIN pinname="Time" visible="1">
    </PIN>
@@ -684,48 +686,24 @@
    <PIN pinname="String0-Value0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="damask" dstnodeid="44" dstpinname="Input" linkstyle="Bezier" hiddenwhenlocked="1">
-   <LINKPOINT x="9645" y="5085">
-   </LINKPOINT>
-   <LINKPOINT x="6390" y="5160">
-   </LINKPOINT>
-   </LINK>
    <LINK srcnodeid="0" srcpinname="Time" dstnodeid="43" dstpinname="Y Input Value">
    </LINK>
-   <LINK srcnodeid="0" srcpinname="zoom" dstnodeid="26" dstpinname="Input 1" linkstyle="Bezier" hiddenwhenlocked="1">
-   <LINKPOINT x="9900" y="5213">
-   </LINKPOINT>
-   <LINKPOINT x="14640" y="5213">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="0" srcpinname="shadow" dstnodeid="31" dstpinname="Input 1" linkstyle="Bezier" hiddenwhenlocked="1">
-   <LINKPOINT x="10110" y="5040">
-   </LINKPOINT>
-   <LINKPOINT x="13215" y="5040">
-   </LINKPOINT>
-   </LINK>
    <LINK srcnodeid="38" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Set Time" linkstyle="Bezier">
-   <LINKPOINT x="10800" y="3165">
+   <LINKPOINT x="10195" y="1935">
    </LINKPOINT>
-   <LINKPOINT x="10110" y="3165">
+   <LINKPOINT x="9830" y="1920">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="21" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Play" linkstyle="Bezier">
-   <LINKPOINT x="9330" y="3158">
+   <LINKPOINT x="8725" y="1928">
    </LINKPOINT>
-   <LINKPOINT x="9225" y="3158">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="0" srcpinname="white" dstnodeid="35" dstpinname="Input" linkstyle="Bezier" hiddenwhenlocked="1">
-   <LINKPOINT x="9420" y="5010">
-   </LINKPOINT>
-   <LINKPOINT x="9105" y="5010">
+   <LINKPOINT x="8945" y="1913">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="0" srcpinname="Time" dstnodeid="23" dstpinname="Seconds" linkstyle="Bezier">
-   <LINKPOINT x="9180" y="2655">
+   <LINKPOINT x="8900" y="1410">
    </LINKPOINT>
-   <LINKPOINT x="6570" y="2655">
+   <LINKPOINT x="5965" y="1425">
    </LINKPOINT>
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="51" systemname="IOBox (Node)">
@@ -763,5 +741,97 @@
    <LINK srcnodeid="27" srcpinname="Texture Out" dstnodeid="50" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="20" srcpinname="Transform Out" dstnodeid="51" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="02_timeline" filename="%VVVV%\works\hikari\honban\02_timeline.v4p" nodename="%VVVV%\works\hikari\honban\02_timeline.v4p" componentmode="InAWindow" id="53">
+   <BOUNDS type="Node" left="9120" top="4125" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="990" top="690" width="20010" height="13995">
+   </BOUNDS>
+   <PIN pinname="Time" visible="1">
+   </PIN>
+   <PIN pinname="damsk on" visible="1">
+   </PIN>
+   <PIN pinname="white" visible="1">
+   </PIN>
+   <PIN pinname="damask" visible="1">
+   </PIN>
+   <PIN pinname="zoom" visible="1">
+   </PIN>
+   <PIN pinname="shadow" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="shadow on" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Time" dstnodeid="53" dstpinname="Time">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="54" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="11265" top="945" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11265" top="945" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|damask on|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="54" srcpinname="Y Output Value" dstnodeid="53" dstpinname="damsk on">
+   </LINK>
+   <LINK srcnodeid="53" srcpinname="white" dstnodeid="35" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="53" srcpinname="damask" dstnodeid="44" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="53" srcpinname="zoom" dstnodeid="26" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="53" srcpinname="shadow" dstnodeid="31" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="57" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3045" top="1590" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3045" top="1590" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.3">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="57" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Width">
+   </LINK>
+   <LINK srcnodeid="38" srcpinname="Y Output Value" dstnodeid="53" dstpinname="Reset">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="58" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="12570" top="885" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="12570" top="885" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|shadow on|">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="58" srcpinname="Y Output Value" dstnodeid="53" dstpinname="shadow on">
    </LINK>
    </PATCH>
