@@ -48,6 +48,8 @@ namespace VVVV.Nodes
 //		public ISpread<int> FMaxCount;
 		[Input("Life", DefaultValue = 100)]
 		public ISpread<int> Life;
+		[Input("DeleteID", DefaultValue = 0)]
+		public ISpread<int> DeleteID;
 		[Input("EmitCount", DefaultValue = 1)]
 		public ISpread<int> EmitCount;
 		[Input("Emit", DefaultValue = 0)]
@@ -59,6 +61,8 @@ namespace VVVV.Nodes
 		public ISpread<Vector2D> FOutputPos;
 		[Output("Size")]
 		public ISpread<Vector2D> FOutputSize;
+		[Output("ID")]
+		public ISpread<int> FOutputID;
 		[Output("IsDead")]
 		public ISpread<bool> FOutputDead;
 		[Output("Count")]
@@ -100,9 +104,9 @@ namespace VVVV.Nodes
 			if(FEmit[0]){
 				for(int i=0; i<MAX_PARTICLE_COUNT; i++)
 				{
-					Particle p = particles[i];
-					if(!p.isActive)
+					if(!particles[i].isActive)
 					{
+						Particle p = particles[i];
 						p.pos = FInputPos[0];
 						p.vel = FInputVel[0];
 						p.acc = FInputAcc[0];
@@ -133,16 +137,14 @@ namespace VVVV.Nodes
 			int counter = 0;
 			for(int i=0; i<MAX_PARTICLE_COUNT; i++)
 			{
+				if(!particles[i].isActive) continue;
 				Particle p = particles[i];
 				p.vel += p.acc;
 				p.pos += p.vel;
 				p.age++;
-				if(p.age > p.life)
-				{
-					p.isDead = true;
-				}
 				particles[i] = p;
-				if(particles[i].isActive) counter++;
+				counter++;
+//				if(particles[i].isActive) counter++;
 			}
 			
 			// output
@@ -155,32 +157,26 @@ namespace VVVV.Nodes
 				if(!particles[i].isActive) continue;
 				
 				Particle p = particles[i];
-				p.vel += p.acc;
-				p.pos += p.vel;
-				p.age++;
+				
 				if(p.isDead)
 				{
 					p.isActive = false;
-					FOutputDead[counter] = true;
-				}else{
 					FOutputDead[counter] = false;
+				}else{
+					if(p.age >= p.life || p.index == DeleteID[0])
+					{
+						p.isDead = true;
+						FOutputDead[counter] = true;
+					}else{
+						FOutputDead[counter] = false;
+					}
 				}
 				FOutputPos[counter] = p.pos;
 				FOutputSize[counter] = p.size;
 				particles[i] = p;
 				FLogger.Log(LogType.Debug, "id: " + p.index);
 				counter++;
-				//FInputPos[i] * 2;
-//				if(particles[i].life < 0)
-//				{
-//					FOutputDead[i] = true;				
-//				}else{
-//					FOutputDead[i] = false;	
-//				}
 			}
-
-
-			//FLogger.Log(LogType.Debug, "hi tty!");
 		}
 	}
 }

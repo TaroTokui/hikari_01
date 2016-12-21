@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="D:\vvvv32\vvvv_45beta34.2_x86\works\hikari\MyParticle.v4p" systemname="MyParticle" filename="D:\vvvv32\vvvv_45beta34.2_x86\works\hikari\MyParticle.v4p" scrollx="0" scrolly="720">
+   <PATCH nodename="D:\vvvv32\vvvv_45beta34.2_x86\works\hikari\MyParticle.v4p" systemname="MyParticle" filename="D:\vvvv32\vvvv_45beta34.2_x86\works\hikari\MyParticle.v4p" scrollx="0" scrolly="1080">
    <BOUNDS type="Window" left="1785" top="6120" width="9000" height="9030">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
@@ -34,6 +34,8 @@
    <PIN pinname="IsDead" visible="1">
    </PIN>
    <PIN pinname="SizeXY" visible="1">
+   </PIN>
+   <PIN pinname="DeleteID" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="ZeroOneTimer (Value)" filename="..\..\..\contributions\plugins\ValueZeroOneTimer\ValueZeroOneTimer.csproj" nodename="ZeroOneTimer (Value)" componentmode="Hidden" id="1">
@@ -87,11 +89,11 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="8" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="5745" top="3045" width="795" height="240">
+   <BOUNDS type="Box" left="5985" top="2880" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="5745" top="3045" width="0" height="0">
+   <BOUNDS type="Node" left="5985" top="2880" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="18">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -99,13 +101,15 @@
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="0" dstpinname="State">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="11" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="5100" top="3960" width="795" height="240">
+   <BOUNDS type="Box" left="4935" top="3960" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="5100" top="3960" width="0" height="0">
+   <BOUNDS type="Node" left="4935" top="3960" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -157,9 +161,9 @@
    <LINK srcnodeid="13" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Emit">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="16" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="5385" top="4560" width="480" height="480">
+   <BOUNDS type="Box" left="5325" top="4500" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="5385" top="4560" width="0" height="0">
+   <BOUNDS type="Node" left="5325" top="4500" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -174,14 +178,6 @@
    </NODE>
    <LINK srcnodeid="0" srcpinname="IsDead" dstnodeid="16" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="Renderer (TTY)" nodename="Renderer (TTY)" componentmode="InAWindow" id="17">
-   <BOUNDS type="Node" left="6810" top="2535" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="6810" top="2535" width="2400" height="1800">
-   </BOUNDS>
-   <BOUNDS type="Window" left="1470" top="1980" width="6240" height="5085">
-   </BOUNDS>
-   </NODE>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="18">
    <BOUNDS type="Node" left="2730" top="1485" width="100" height="100">
    </BOUNDS>
@@ -245,7 +241,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3015" top="7215" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="9135" top="8400" width="6240" height="5085">
+   <BOUNDS type="Window" left="5955" top="1185" width="6240" height="5085">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -356,4 +352,32 @@
    </NODE>
    <LINK srcnodeid="32" srcpinname="Output" dstnodeid="34" dstpinname="Y Input Value">
    </LINK>
+   <NODE systemname="PerfMeter (Debug)" filename="%VVVV%\lib\nodes\modules\Debug\PerfMeter (Debug).v4p" nodename="PerfMeter (Debug)" componentmode="Hidden" id="35">
+   <BOUNDS type="Node" left="6930" top="4005" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="fps" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="36" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7950" top="4845" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7950" top="4845" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="35" srcpinname="fps" dstnodeid="36" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="0" dstpinname="DeleteID">
+   </LINK>
+   <NODE systemname="Renderer (TTY)" nodename="Renderer (TTY)" componentmode="InAWindow" id="37">
+   <BOUNDS type="Node" left="630" top="7815" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="630" top="7815" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="1140" top="1260" width="6240" height="5085">
+   </BOUNDS>
+   </NODE>
    </PATCH>
