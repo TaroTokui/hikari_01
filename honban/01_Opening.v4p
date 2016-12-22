@@ -684,4 +684,6 @@
    </LINK>
    <LINK srcnodeid="114" srcpinname="Output" dstnodeid="95" dstpinname="ScaleXY">
    </LINK>
+   <LINK srcnodeid="105" srcpinname="Buffers" dstnodeid="113" dstpinname="Texture In 2">
+   </LINK>
    </PATCH>
