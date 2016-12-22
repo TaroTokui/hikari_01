@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="D:\vvvv32\vvvv_45beta34.2_x86\works\hikari\honban\main.v4p" systemname="hikari_tree" filename="D:\vvvv32\vvvv_45beta34.2_x86\works\hikari_tree.v4p" scrollx="405" scrolly="0">
-   <BOUNDS type="Window" left="4275" top="1110" width="20010" height="13995">
+   <PATCH nodename="D:\vvvv32\vvvv_45beta34.2_x86\works\hikari\honban\main.v4p" systemname="hikari_tree" filename="D:\vvvv32\vvvv_45beta34.2_x86\works\hikari_tree.v4p" scrollx="405" scrolly="-360">
+   <BOUNDS type="Window" left="1920" top="390" width="21870" height="14820">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -127,28 +127,6 @@
    <LINK srcnodeid="280" srcpinname="Output Node" dstnodeid="85" dstpinname="Texture In">
    </LINK>
    <LINK srcnodeid="280" srcpinname="Output Node" dstnodeid="38" dstpinname="Input Buffer">
-   </LINK>
-   <NODE systemname="02_damask" filename="%VVVV%\works\hikari\honban\02_damask.v4p" nodename="%VVVV%\works\hikari\honban\02_damask.v4p" componentmode="InAWindow" id="281">
-   <BOUNDS type="Node" left="7440" top="4809" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="2715" top="225" width="17340" height="12460">
-   </BOUNDS>
-   <BOUNDS type="Window" left="4275" top="1110" width="20010" height="13995">
-   </BOUNDS>
-   <PIN pinname="Start" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Reset" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Layer 1" visible="1">
-   </PIN>
-   <PIN pinname="Rear Screen" visible="1">
-   </PIN>
-   <PIN pinname="Front Screen" visible="1">
-   </PIN>
-   <PIN pinname="Scale" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="236" srcpinname="Output Node" dstnodeid="281" dstpinname="Texture In">
    </LINK>
    <NODE systemname="FullscreenQuad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\modules\FullscreenQuad (DX11.Layer).v4p" nodename="FullscreenQuad (DX11.Layer)" componentmode="Hidden" id="305">
    <BOUNDS type="Node" left="4545" top="8595" width="100" height="100">
@@ -293,7 +271,7 @@
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="357">
    <BOUNDS type="Node" left="9645" top="900" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="9645" top="900" width="960" height="300">
+   <BOUNDS type="Box" left="9645" top="900" width="945" height="765">
    </BOUNDS>
    <PIN pinname="Vector Size" slicecount="1" values="4">
    </PIN>
@@ -315,7 +293,7 @@
    <LINK srcnodeid="361" srcpinname="Output" dstnodeid="357" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="381">
-   <BOUNDS type="Node" left="9645" top="1515" width="100" height="100">
+   <BOUNDS type="Node" left="9660" top="1950" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="4" values="0.242776289582252,0.916879117488862,0.548828125,0.48697915673256">
    </PIN>
@@ -718,33 +696,9 @@
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
    </NODE>
-   <NODE systemname="MainLoop (VVVV)" nodename="MainLoop (VVVV)" componentmode="Hidden" id="-6">
-   <BOUNDS type="Node" left="765" top="2100" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Maximum background fpsS" slicecount="1" values="120">
-   </PIN>
-   </NODE>
    <LINK srcnodeid="392" srcpinname="Texture Out" dstnodeid="307" dstpinname="Texture In">
    </LINK>
    <LINK srcnodeid="392" srcpinname="Texture Out" dstnodeid="393" dstpinname="Texture In">
-   </LINK>
-   <NODE systemname="05_rain" filename="%VVVV%\works\hikari\honban\05_rain.v4p" nodename="%VVVV%\works\hikari\honban\05_rain.v4p" componentmode="InAWindow" id="414">
-   <BOUNDS type="Node" left="11085" top="4800" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Window" left="9645" top="780" width="20010" height="13995">
-   </BOUNDS>
-   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Rear Screen" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Front Screen" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="236" srcpinname="Output Node" dstnodeid="414" dstpinname="Texture In">
-   </LINK>
-   <LINK srcnodeid="381" srcpinname="Output" dstnodeid="414" dstpinname="X">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="415" systemname="IOBox (String)">
    <BOUNDS type="Node" left="2100" top="12000" width="975" height="270">
@@ -778,40 +732,6 @@
    <PIN pinname="Size" slicecount="1" values="24">
    </PIN>
    </NODE>
-   <LINK srcnodeid="414" srcpinname="Rear Screen" dstnodeid="307" dstpinname="Texture In 2">
-   </LINK>
-   <LINK srcnodeid="414" srcpinname="Front Screen" dstnodeid="393" dstpinname="Texture In 2">
-   </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="418" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="1965" top="360" width="1980" height="255">
-   </BOUNDS>
-   <BOUNDS type="Node" left="1965" top="360" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="fromOF">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="#vvvv">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Name of Spout Sender|">
-   </PIN>
-   </NODE>
-   <NODE id="417" systemname="Spout_Receiver_DX11" filename="..\..\contributions\modules\spout\Receiver\DirectX 11\Spout_Receiver_DX11.v4p" nodename="Spout_Receiver_DX11.v4p" componentmode="Hidden">
-   <BOUNDS type="Node" left="1980" top="885" width="1845" height="270">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <BOUNDS type="Window" left="13725" top="1875" width="5340" height="10740">
-   </BOUNDS>
-   <BOUNDS type="Box" left="1980" top="885">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="418" srcpinname="Output String" dstnodeid="417" dstpinname="SpoutSenderName">
-   </LINK>
-   <LINK srcnodeid="417" srcpinname="Texture" dstnodeid="236" dstpinname="Input Node">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="419" systemname="IOBox (String)">
    <BOUNDS type="Node" left="15705" top="3810" width="885" height="270">
    </BOUNDS>
@@ -826,4 +746,56 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <NODE systemname="05_rain" filename="%VVVV%\works\hikari\honban\05_rain.v4p" nodename="%VVVV%\works\hikari\honban\05_rain.v4p" componentmode="InAWindow" id="420">
+   <BOUNDS type="Node" left="10560" top="4620" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="1920" top="390" width="21870" height="14820">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Rear Screen" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Front Screen" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="236" srcpinname="Output Node" dstnodeid="420" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="381" srcpinname="Output" dstnodeid="420" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="420" srcpinname="Front Screen" dstnodeid="393" dstpinname="Texture In 2">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="422" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="2145" top="165" width="1980" height="255">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2145" top="165" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="fromOF">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="#vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Name of Spout Sender|">
+   </PIN>
+   </NODE>
+   <NODE id="421" systemname="Spout_Receiver_DX11" filename="..\..\contributions\modules\spout\Receiver\DirectX 11\Spout_Receiver_DX11.v4p" nodename="Spout_Receiver_DX11.v4p" componentmode="Hidden">
+   <BOUNDS type="Node" left="2160" top="690" width="1845" height="270">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="13725" top="1875" width="5340" height="10740">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2160" top="690">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="422" srcpinname="Output String" dstnodeid="421" dstpinname="SpoutSenderName">
+   </LINK>
+   <LINK srcnodeid="421" srcpinname="Texture" dstnodeid="236" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="420" srcpinname="Rear Screen" dstnodeid="307" dstpinname="Texture In 2">
+   </LINK>
    </PATCH>

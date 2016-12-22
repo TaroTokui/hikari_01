@@ -33,7 +33,7 @@ namespace VVVV.Nodes
 	#endregion PluginInfo
 	public class ValueInteractiveParticleNode : IPluginEvaluate
 	{
-		public const int MAX_PARTICLE_COUNT = 1000;
+		public const int MAX_PARTICLE_COUNT = 500;
 	
 		#region fields & pins
 		[Input("Position", DefaultValue = 1.0)]
@@ -48,7 +48,7 @@ namespace VVVV.Nodes
 //		public ISpread<int> FMaxCount;
 		[Input("Life", DefaultValue = 100)]
 		public ISpread<int> Life;
-		[Input("DeleteID", DefaultValue = 0)]
+		[Input("DeleteID", DefaultValue = -1)]
 		public ISpread<int> DeleteID;
 		[Input("EmitCount", DefaultValue = 1)]
 		public ISpread<int> EmitCount;
@@ -67,6 +67,8 @@ namespace VVVV.Nodes
 		public ISpread<bool> FOutputDead;
 		[Output("Count")]
 		public ISpread<int> FOutputCount;
+		[Output("Life")]
+		public ISpread<double> FOutputLife;
 
 		[Import()]
 		public ILogger FLogger;
@@ -102,23 +104,22 @@ namespace VVVV.Nodes
 			
 			// add particle
 			if(FEmit[0]){
+				int addCount = EmitCount[0];
 				for(int i=0; i<MAX_PARTICLE_COUNT; i++)
 				{
-					if(!particles[i].isActive)
-					{
-						Particle p = particles[i];
-						p.pos = FInputPos[0];
-						p.vel = FInputVel[0];
-						p.acc = FInputAcc[0];
-						p.size = FInputSize[0];
-						p.age = 0;
-						p.life = Life[0] * 10;
-						p.isActive = true;
-						p.isDead = false;
-						particles[i] = p;
-						EmitCount[0]--;
-						if(EmitCount[0] <= 0) break;
-					}
+					if(particles[i].isActive) continue;
+					Particle p = particles[i];
+					p.pos = FInputPos[0];
+					p.vel = FInputVel[0];
+					p.acc = FInputAcc[0];
+					p.size = FInputSize[0];
+					p.age = 0;
+					p.life = Life[0] * 10;
+					p.isActive = true;
+					p.isDead = false;
+					particles[i] = p;
+					addCount--;
+					if(addCount <= 0) break;
 				}
 			}
 			
@@ -135,6 +136,7 @@ namespace VVVV.Nodes
 			
 			// update
 			int counter = 0;
+			int deleteCount = DeleteID.SliceCount;
 			for(int i=0; i<MAX_PARTICLE_COUNT; i++)
 			{
 				if(!particles[i].isActive) continue;
@@ -143,6 +145,15 @@ namespace VVVV.Nodes
 				p.pos += p.vel;
 				p.age++;
 				particles[i] = p;
+				
+				// check colision
+//				for(int j=0; j<deleteCount; j++){
+//					if(p.index == DeleteID[j])
+//					{
+//						p.isDead = true;
+//					}
+//				}
+				
 				counter++;
 //				if(particles[i].isActive) counter++;
 			}
@@ -151,6 +162,9 @@ namespace VVVV.Nodes
 			FOutputCount[0] = counter;
 			FOutputPos.SliceCount = counter;
 			FOutputSize.SliceCount = counter;
+			FOutputID.SliceCount = counter;
+			FOutputLife.SliceCount = counter;
+			FOutputDead.SliceCount = counter;
 			counter = 0;
 			for (int i = 0; i < MAX_PARTICLE_COUNT; i++)
 			{
@@ -163,18 +177,22 @@ namespace VVVV.Nodes
 					p.isActive = false;
 					FOutputDead[counter] = false;
 				}else{
-					if(p.age >= p.life || p.index == DeleteID[0])
-					{
-						p.isDead = true;
-						FOutputDead[counter] = true;
-					}else{
-						FOutputDead[counter] = false;
+					for(int j=0; j<deleteCount; j++){
+						if(p.age >= p.life || p.index == DeleteID[j])
+						{
+							p.isDead = true;
+							FOutputDead[counter] = true;
+						}else{
+							FOutputDead[counter] = false;
+						}
 					}
 				}
 				FOutputPos[counter] = p.pos;
 				FOutputSize[counter] = p.size;
+				FOutputID[counter] = p.index;
+				FOutputLife[counter] = 1.0 - p.age / p.life;
+//				FLogger.Log(LogType.Debug, "id: " + p.index);
 				particles[i] = p;
-				FLogger.Log(LogType.Debug, "id: " + p.index);
 				counter++;
 			}
 		}
