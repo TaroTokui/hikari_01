@@ -33,7 +33,7 @@ namespace VVVV.Nodes
 	#endregion PluginInfo
 	public class ValueInteractiveParticleNode : IPluginEvaluate
 	{
-		public const int MAX_PARTICLE_COUNT = 500;
+		public const int MAX_PARTICLE_COUNT = 10000;
 	
 		#region fields & pins
 		[Input("Position", DefaultValue = 1.0)]
